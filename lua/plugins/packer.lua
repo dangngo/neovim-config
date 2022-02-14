@@ -76,7 +76,7 @@ return packer.startup(function(use)
   -- Syntax highlighter
   use {
     "nvim-treesitter/nvim-treesitter",
-    run = ":TSUpdate",
+    -- run = ":TSUpdate",
   }
 
 
