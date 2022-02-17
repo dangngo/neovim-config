@@ -53,6 +53,11 @@ cmd [[
   autocmd FileType xml,html,xhtml,css,scss,javascript,lua,yaml,groovy setlocal shiftwidth=2 tabstop=2
 ]]
 
+cmd [[
+  autocmd BufRead * autocmd FileType <buffer> ++once
+    \ if &ft !~# 'commit\|rebase' && line("'\"") > 1 && line("'\"") <= line("$") | exe 'normal! g`"' | endif
+]]
+
 -- highlight on yank
 exec([[
   augroup YankHighlight
