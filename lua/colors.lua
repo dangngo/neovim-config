@@ -19,7 +19,7 @@ catppuccin.setup({
   integrations = {
     -- workaround italics not respected
     -- https://github.com/catppuccin/nvim/issues/95
-    treesitter = false,
+    treesitter = true,
     native_lsp = {
       enabled = true,
       virtual_text = {
