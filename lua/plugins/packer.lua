@@ -65,7 +65,7 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-path" -- Path completions
   use "hrsh7th/cmp-cmdline" -- Cmdline completions
   use "hrsh7th/cmp-nvim-lsp" -- Nvim config completions
-  --use "saadparwaiz1/cmp_luasnip" -- Lua snippet completions
+  use "saadparwaiz1/cmp_luasnip" -- Lua snippet completions
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
@@ -78,7 +78,6 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     -- run = ":TSUpdate",
   }
-
 
   -- UI
   use "kyazdani42/nvim-web-devicons" -- Icons
@@ -93,19 +92,19 @@ return packer.startup(function(use)
   use "folke/which-key.nvim" -- Shortcut cheat sheet
 
   -- Git
-  use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' } -- Magit for Nvim
+  use { "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" } -- Magit for Nvim
   use "lewis6991/gitsigns.nvim"
 
   -- Colorschemes
-  use 'EdenEast/nightfox.nvim'
-  use 'folke/tokyonight.nvim'
-  use({
+  use "EdenEast/nightfox.nvim"
+  use "folke/tokyonight.nvim"
+  use {
     "catppuccin/nvim",
-    as = "catppuccin"
-  })
+    as = "catppuccin",
+  }
 
   -- Snippets
-  --use "L3MON4D3/LuaSnip" -- Lua snippet engine
+  use "L3MON4D3/LuaSnip" -- Lua snippet engine
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
