@@ -86,6 +86,7 @@ return packer.startup(function(use)
 
   -- Misc
   use "windwp/nvim-autopairs" -- Autopairs
+  use "abecodes/tabout.nvim" -- Tab out of stuffs
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use "JoosepAlviste/nvim-ts-context-commentstring" -- Context aware comment
   use "lukas-reineke/indent-blankline.nvim" -- Show indents
