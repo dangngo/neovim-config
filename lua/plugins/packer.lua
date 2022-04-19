@@ -94,6 +94,7 @@ return packer.startup(function(use)
   use "JoosepAlviste/nvim-ts-context-commentstring" -- Context aware comment
   use "lukas-reineke/indent-blankline.nvim" -- Show indents
   use "folke/which-key.nvim" -- Shortcut cheat sheet
+  use "phaazon/hop.nvim" -- Hop around file easymotion
 
   -- Git
   use { "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" } -- Magit for Nvim

@@ -98,16 +98,7 @@ local mappings = {
     r = { "<cmd>NvimTreeRefresh<cr>", "Refresh" },
     f = { "<cmd>NvimTreeFindFile<cr>", "Find File" },
   },
-
-  P = {
-    name = "Packer",
-    c = { "<cmd>PackerCompile<cr>", "Compile" },
-    i = { "<cmd>PackerInstall<cr>", "Install" },
-    s = { "<cmd>PackerSync<cr>", "Sync" },
-    S = { "<cmd>PackerStatus<cr>", "Status" },
-    u = { "<cmd>PackerUpdate<cr>", "Update" },
-  },
-
+  
   g = {
     name = "Git",
     g = { "<cmd>Neogit<cr>", "Neogit" },
@@ -129,6 +120,12 @@ local mappings = {
       "<cmd>Gitsigns diffthis HEAD<cr>",
       "Diff",
     },
+  },
+
+  h = {
+    name = "Hop",
+    b = {"<cmd>lua require'hop'.hint_char2()<cr>", "Type 2 chars to hop"},
+    l = {"<cmd>lua require'hop'.hint_lines()<cr>", "Hop around lines"}
   },
 
   l = {
@@ -158,6 +155,16 @@ local mappings = {
       "Workspace Symbols",
     },
   },
+
+  P = {
+    name = "Packer",
+    c = { "<cmd>PackerCompile<cr>", "Compile" },
+    i = { "<cmd>PackerInstall<cr>", "Install" },
+    s = { "<cmd>PackerSync<cr>", "Sync" },
+    S = { "<cmd>PackerStatus<cr>", "Status" },
+    u = { "<cmd>PackerUpdate<cr>", "Update" },
+  },
+
   s = {
     name = "Search",
     r = { "<cmd>Telescope oldfiles<cr>", "Recent Files" },
