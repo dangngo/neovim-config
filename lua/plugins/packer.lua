@@ -95,6 +95,7 @@ return packer.startup(function(use)
   use "lukas-reineke/indent-blankline.nvim" -- Show indents
   use "folke/which-key.nvim" -- Shortcut cheat sheet
   use "phaazon/hop.nvim" -- Hop around file easymotion
+  use 'lewis6991/impatient.nvim' -- Improve startup time
 
   -- Git
   use { "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" } -- Magit for Nvim
