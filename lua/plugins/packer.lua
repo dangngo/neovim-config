@@ -97,6 +97,9 @@ return packer.startup(function(use)
   use "phaazon/hop.nvim" -- Hop around file easymotion
   use 'lewis6991/impatient.nvim' -- Improve startup time
   use 'karb94/neoscroll.nvim' -- Smooth scrolling
+  use {'kevinhwang91/nvim-bqf', ft = 'qf'}
+  --use "nyngwang/NeoZoom.lua" -- Zoom in/out
+  use "SmiteshP/nvim-gps" -- Show context in status line
 
   -- Git
   use { "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" } -- Magit for Nvim
