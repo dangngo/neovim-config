@@ -96,6 +96,7 @@ return packer.startup(function(use)
   use "folke/which-key.nvim" -- Shortcut cheat sheet
   use "phaazon/hop.nvim" -- Hop around file easymotion
   use 'lewis6991/impatient.nvim' -- Improve startup time
+  use 'karb94/neoscroll.nvim' -- Smooth scrolling
 
   -- Git
   use { "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" } -- Magit for Nvim
