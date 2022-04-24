@@ -83,7 +83,7 @@ local mappings = {
     "Buffers",
   },
   ["q"] = { "<cmd>lua require('utils').close_buffer()<cr>", "Close Buffer" },
-  ["w"] = { "<cmd>w!<CR>", "Save & Quit" },
+  ["w"] = { "<cmd>exit<CR>", "Save & Quit" },
   ["<space>"] = {
     "<cmd>Telescope find_files<cr>",
     "Find files",
@@ -131,10 +131,7 @@ local mappings = {
   l = {
     name = "LSP",
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
-    d = {
-      "<cmd>Telescope lsp_document_diagnostics<cr>",
-      "Document Diagnostics",
-    },
+    d = { "<cmd>TroubleToggle<cr>", "Diagnostics" },
     f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
     i = { "<cmd>LspInfo<cr>", "Info" },
     I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
@@ -149,10 +146,15 @@ local mappings = {
     l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
     q = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Quickfix" },
     r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
+    R = { "<cmd>TroubleToggle lsp_references<cr>", "References" },
     s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
     S = {
       "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
       "Workspace Symbols",
+    },
+    w = {
+      "<cmd>Telescope lsp_workspace_diagnostics<cr>",
+      "Workspace Diagnostics",
     },
   },
 

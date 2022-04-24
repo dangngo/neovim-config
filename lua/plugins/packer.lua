@@ -81,17 +81,23 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     -- run = ":TSUpdate",
   }
+  use "JoosepAlviste/nvim-ts-context-commentstring" -- Context aware comment
+  use { "p00f/nvim-ts-rainbow" } -- Rainbow parantheses
+  use "windwp/nvim-ts-autotag" -- Auto close HTML tags
 
   -- UI
   use "kyazdani42/nvim-web-devicons" -- Icons
   use "akinsho/bufferline.nvim" -- Tabline
   use "nvim-lualine/lualine.nvim" -- Statusline
+  use {
+    "folke/trouble.nvim",
+    cmd = "TroubleToggle",
+  }
 
   -- Misc
   use "windwp/nvim-autopairs" -- Autopairs
   use "abecodes/tabout.nvim" -- Tab out of stuffs
   use "numToStr/Comment.nvim" -- Easily comment stuff
-  use "JoosepAlviste/nvim-ts-context-commentstring" -- Context aware comment
   use "lukas-reineke/indent-blankline.nvim" -- Show indents
   use "folke/which-key.nvim" -- Shortcut cheat sheet
   use "phaazon/hop.nvim" -- Hop around file easymotion
