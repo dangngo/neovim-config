@@ -46,7 +46,7 @@ local keymaps = {
   { key = ">",                            action = "next_sibling" },
   { key = "P",                            action = "parent_node" },
   { key = "<BS>",                         action = "close_node" },
-  --{ key = "<Tab>",                        action = "preview" },
+  { key = "<Tab>",                        action = "preview" },
   { key = "K",                            action = "first_sibling" },
   { key = "J",                            action = "last_sibling" },
   { key = "I",                            action = "toggle_ignored" },
