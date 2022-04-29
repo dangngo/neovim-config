@@ -72,30 +72,54 @@ local keymaps = {
 }
 
 nvim_tree.setup {
+  auto_reload_on_write = true,
   disable_netrw = true,
+  hijack_cursor = false,
   hijack_netrw = true,
+  hijack_unnamed_buffer_when_opening = false,
+  ignore_buffer_on_setup = false,
   open_on_setup = false,
+  open_on_setup_file = false,
+  open_on_tab = false,
+  sort_by = "name",
+  update_cwd = false,
   ignore_ft_on_setup = {
     "startify",
     "dashboard",
     "alpha",
   },
-  auto_close = false,
-  open_on_tab = false,
-  hijack_cursor = false,
-  update_cwd = true,
-  update_to_buf_dir = {
+  view = {
+    width = 30,
+    height = 30,
+    hide_root_folder = false,
+    side = "left",
+    preserve_window_proportions = false,
+    number = false,
+    relativenumber = false,
+    signcolumn = "yes",
+    mappings = {
+      custom_only = false,
+      list = {
+        -- user mappings go here
+      },
+    },
+  },
+  renderer = {
+    indent_markers = {
+      enable = false,
+      icons = {
+        corner = "└ ",
+        edge = "│ ",
+        none = "  ",
+      },
+    },
+    icons = {
+      webdev_colors = true,
+    },
+  },
+  hijack_directories = {
     enable = true,
     auto_open = true,
-  },
-  diagnostics = {
-    enable = true,
-    icons = {
-      hint = "",
-      info = "",
-      warning = "",
-      error = "",
-    },
   },
   update_focused_file = {
     enable = true,
@@ -103,44 +127,63 @@ nvim_tree.setup {
     ignore_list = {},
   },
   system_open = {
-    cmd = nil,
+    cmd = "",
     args = {},
+  },
+  diagnostics = {
+    enable = true,
+    show_on_dirs = false,
+    icons = {
+      hint = "",
+      info = "",
+      warning = "",
+      error = "",
+    },
   },
   filters = {
     dotfiles = false,
     custom = {".git"},
+    exclude = {},
   },
   git = {
     enable = true,
     ignore = true,
-    timeout = 500,
+    timeout = 400,
   },
-  view = {
-    width = 30,
-    height = 30,
-    hide_root_folder = false,
-    side = "left",
-    auto_resize = true,
-    mappings = {
-      custom_only = false,
-      list = keymaps,
+  actions = {
+    use_system_clipboard = true,
+    change_dir = {
+      enable = true,
+      global = false,
+      restrict_above_cwd = false,
     },
-    number = false,
-    relativenumber = false,
+    open_file = {
+      quit_on_open = false,
+      resize_window = false,
+      window_picker = {
+        enable = true,
+        chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890",
+        exclude = {
+          filetype = { "notify", "packer", "qf", "diff", "fugitive", "fugitiveblame" },
+          buftype = { "nofile", "terminal", "help" },
+        },
+      },
+    },
   },
   trash = {
     cmd = "trash",
     require_confirm = true,
   },
-  quit_on_open = 0,
-  git_hl = 1,
-  disable_window_picker = 0,
-  root_folder_modifier = ":t",
-  show_icons = {
-    git = 1,
-    folders = 1,
-    files = 1,
-    folder_arrows = 1,
-    tree_width = 30,
+  log = {
+    enable = false,
+    truncate = false,
+    types = {
+      all = false,
+      config = false,
+      copy_paste = false,
+      diagnostics = false,
+      git = false,
+      profile = false,
+    },
   },
 }
