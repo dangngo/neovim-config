@@ -107,6 +107,12 @@ return packer.startup(function(use)
   use {'kevinhwang91/nvim-bqf', ft = 'qf'}
   --use "nyngwang/NeoZoom.lua" -- Zoom in/out
   use "SmiteshP/nvim-gps" -- Show context in status line
+  use {
+    "ur4ltz/surround.nvim",
+    config = function()
+      require"surround".setup {mappings_style = "surround"}
+    end
+  }
 
   -- Git
   use { "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" } -- Magit for Nvim
@@ -125,7 +131,7 @@ return packer.startup(function(use)
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
-  -- if PACKER_BOOTSTRAP then
-  --   require("packer").sync()
-  -- end
+  if PACKER_BOOTSTRAP then
+    require("packer").sync()
+  end
 end)
