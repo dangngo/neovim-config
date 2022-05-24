@@ -88,6 +88,7 @@ return packer.startup(function(use)
   -- UI
   use "kyazdani42/nvim-web-devicons" -- Icons
   use "akinsho/bufferline.nvim" -- Tabline
+  use 'famiu/bufdelete.nvim' -- Buffer delete to go with bufferline
   use "nvim-lualine/lualine.nvim" -- Statusline
   use {
     "folke/trouble.nvim",
