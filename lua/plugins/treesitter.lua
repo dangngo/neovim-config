@@ -10,7 +10,10 @@ end
 configs.setup {
   ensure_installed = "all", -- one of "all" or a list of languages
   sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
-  ignore_install = { "norg" }, -- List of parsers to ignore installing
+  ignore_install = { 
+    "norg",
+    "phpdoc"
+  }, -- List of parsers to ignore installing
   autopairs = { enable = true },
   indent = { 
     enable = true, 
