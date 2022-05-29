@@ -142,12 +142,12 @@ nvim_tree.setup {
   },
   filters = {
     dotfiles = false,
-    custom = {"\\.git"},
+    custom = {"^\\.git$"},
     exclude = {},
   },
   git = {
     enable = true,
-    ignore = true,
+    ignore = false,
     timeout = 400,
   },
   actions = {
