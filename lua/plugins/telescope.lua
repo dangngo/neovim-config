@@ -80,6 +80,9 @@ telescope.setup {
   },
   pickers = {
     -- Default configuration for builtin pickers goes here:
+    colorscheme = {
+      enable_preview = true
+    },
     find_files = {
       theme = "ivy",
     },
