@@ -117,6 +117,7 @@ return packer.startup(function(use)
   -- Git
   use { "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" } -- Magit for Nvim
   use "lewis6991/gitsigns.nvim"
+  use "f-person/git-blame.nvim"
 
   -- Colorschemes
   use "EdenEast/nightfox.nvim"
