@@ -64,7 +64,7 @@ local progress = function()
   local current_line = vim.fn.line(".")
   local total_lines = vim.fn.line("$")
   local line_percent = math.floor((current_line / total_lines)*100)
-  return line_percent 
+  return line_percent .. "%%"
 end
 
 local spaces = function()
@@ -100,12 +100,9 @@ lualine.setup {
       "filename",
       {nvim_gps, cond = hide_in_width}
     },
-    -- lualine_c = {
-    --   { nvim_gps, cond = hide_in_width },
-    -- },
     lualine_x = { spaces, "encoding", filetype },
-    lualine_y = { {"location", padding={right=1,left=0.5}} },
-    lualine_z = { progress },
+    lualine_y = { progress },
+    lualine_z = { {"location", padding={right=0,left=0}} },
   },
   inactive_sections = {
     lualine_a = {},
