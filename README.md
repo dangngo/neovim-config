@@ -2,25 +2,31 @@
 
 Neovim config using Lua. Heavily inspired by [Neovim-from-scratch](https://github.com/LunarVim/Neovim-from-scratch)
 
+## Prerequisites
+
+* [Neovim >= v0.7.x](https://github.com/neovim/neovim/wiki/Installing-Neovim).
+* [Ripgrep](https://github.com/BurntSushi/ripgrep)
+
+```term
+brew install ripgrep
+```
+* One of [Nerd Fonts](https://www.nerdfonts.com/font-downloads) or any fonts with icons
+
 ## Installation
 
-1. Install [Neovim >= v0.7.x](https://github.com/neovim/neovim/wiki/Installing-Neovim).
-
-2. Make a backup of your current `nvim` config if necessary:
+1. Make a backup of your current `nvim` config if necessary:
 
 ```term
 mv ~/.config/nvim ~/.config/nvim.backup
 ```
 
-3. Clone this repo to the `${HOME}/.config/nvim` directory:
+2. Clone this repo to the `${HOME}/.config/nvim` directory:
 
 ```term
 git clone https://github.com/dangngo/neovim-config.git ~/.config/nvim
 ```
 
-4. (Optional) Install [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
-
-5. Run `nvim` and wait for plugins to be installed
+3. Run `nvim` and wait for plugins to be installed
 
 ## Keybindings
 
@@ -64,6 +70,14 @@ git clone https://github.com/dangngo/neovim-config.git ~/.config/nvim
 | SPC l k     | Go to previous diagnostic              |
 | SPC l r     | Rename symbol                          |
 | SPC l R     | Find references of symbol              |
+
+### Terminal
+
+| Key Binding | Action                     |
+|-------------|----------------------------|
+| SPC \       | Toggle floating terminal   |
+| SPC t h     | Toggle horizontal terminal |
+| SPC t v     | Toggle vertical terminal   |
 
 ## References
 (Or where I stole some configs..)
