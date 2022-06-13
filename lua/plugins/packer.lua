@@ -64,6 +64,7 @@ return packer.startup(function(use)
     "hrsh7th/nvim-cmp", 
     --commit = "f573479528cac39ff5917a4679529e4435b71ffe",
   }
+
   use "hrsh7th/cmp-buffer" -- Buffer completions
   use "hrsh7th/cmp-path" -- Path completions
   use "hrsh7th/cmp-cmdline" -- Cmdline completions
@@ -113,6 +114,7 @@ return packer.startup(function(use)
       require"surround".setup {mappings_style = "surround"}
     end
   }
+  use "Pocco81/AutoSave.nvim"
 
   -- Git
   use { "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" } -- Magit for Nvim

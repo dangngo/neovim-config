@@ -80,6 +80,13 @@ local nvim_gps = function()
   end
 end
 
+local autosave = function()
+  if vim.g.autosave_state then
+    return " "
+  end
+  return ""
+end
+
 -- TODO: find out what is overriding this
 vim.opt.laststatus = 3
 
@@ -100,7 +107,7 @@ lualine.setup {
       "filename",
       {nvim_gps, cond = hide_in_width}
     },
-    lualine_x = { spaces, "encoding", filetype },
+    lualine_x = { spaces, "encoding", filetype, autosave },
     lualine_y = { progress },
     lualine_z = { {"location", padding={right=0,left=0}} },
   },

@@ -191,6 +191,12 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
+
+
+  T = {
+    name = "Toggles",
+    a = { "<cmd>ASToggle<cr>", "Toggle Autosave" },
+  },
 }
 
 which_key.setup(setup)
