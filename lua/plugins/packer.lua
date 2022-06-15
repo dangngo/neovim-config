@@ -60,9 +60,8 @@ return packer.startup(function(use)
   use "akinsho/toggleterm.nvim"
 
   -- Autocompletion
-  use { -- The completion plugin
-    "hrsh7th/nvim-cmp", 
-    --commit = "f573479528cac39ff5917a4679529e4435b71ffe",
+  use {
+    "hrsh7th/nvim-cmp",
   }
 
   use "hrsh7th/cmp-buffer" -- Buffer completions
