@@ -172,7 +172,7 @@ local mappings = {
   },
 
   s = {
-    name = "Search",
+    name = "Telescope Search",
     r = { "<cmd>Telescope oldfiles<cr>", "Recent Files" },
     b = { "<cmd>Telescope git_branches theme=ivy<cr>", "Checkout branch" },
     c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
@@ -192,6 +192,11 @@ local mappings = {
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
 
+  S = {
+    name = "Search Spectre",
+    s = { "<cmd>lua require('spectre').open()<cr>", "Search & Replace" },
+    w = { "<cmd>lua require('spectre').open_visual({select_word=true})<CR>","Search current word" },
+  },
 
   T = {
     name = "Toggles",

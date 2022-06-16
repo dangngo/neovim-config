@@ -76,10 +76,28 @@ return packer.startup(function(use)
   use "tamago324/nlsp-settings.nvim" -- LSP settings defined in JSON
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
+  -- Editor
+  use 'windwp/nvim-spectre' -- search & replace
+  use "Pocco81/AutoSave.nvim" -- autosave
+  use "windwp/nvim-autopairs" -- Autopairs
+  use "abecodes/tabout.nvim" -- Tab out of stuffs
+  use "numToStr/Comment.nvim" -- Easily comment stuff
+  use "phaazon/hop.nvim" -- Hop around file easymotion
+  use {
+    "folke/trouble.nvim", -- Show diagnostics
+    cmd = "TroubleToggle",
+  }
+  use {'kevinhwang91/nvim-bqf', ft = 'qf'}
+  use {
+    "ur4ltz/surround.nvim",
+    config = function()
+      require"surround".setup {mappings_style = "surround"}
+    end
+  }
+
   -- Syntax highlighter
   use {
     "nvim-treesitter/nvim-treesitter",
-    -- run = ":TSUpdate",
   }
   use "JoosepAlviste/nvim-ts-context-commentstring" -- Context aware comment
   use { "p00f/nvim-ts-rainbow" } -- Rainbow parantheses
@@ -88,32 +106,16 @@ return packer.startup(function(use)
   -- UI
   use "kyazdani42/nvim-web-devicons" -- Icons
   use "akinsho/bufferline.nvim" -- Tabline
-  use 'famiu/bufdelete.nvim' -- Buffer delete to go with bufferline
   use "nvim-lualine/lualine.nvim" -- Statusline
-  use {
-    "folke/trouble.nvim",
-    cmd = "TroubleToggle",
-  }
+  use "SmiteshP/nvim-gps" -- Show context in status line
 
   -- Misc
-  use "windwp/nvim-autopairs" -- Autopairs
-  use "abecodes/tabout.nvim" -- Tab out of stuffs
-  use "numToStr/Comment.nvim" -- Easily comment stuff
+  use 'famiu/bufdelete.nvim' -- Buffer delete to go with bufferline
   use "lukas-reineke/indent-blankline.nvim" -- Show indents
   use "folke/which-key.nvim" -- Shortcut cheat sheet
-  use "phaazon/hop.nvim" -- Hop around file easymotion
   use 'lewis6991/impatient.nvim' -- Improve startup time
   use 'karb94/neoscroll.nvim' -- Smooth scrolling
-  use {'kevinhwang91/nvim-bqf', ft = 'qf'}
   --use "nyngwang/NeoZoom.lua" -- Zoom in/out
-  use "SmiteshP/nvim-gps" -- Show context in status line
-  use {
-    "ur4ltz/surround.nvim",
-    config = function()
-      require"surround".setup {mappings_style = "surround"}
-    end
-  }
-  use "Pocco81/AutoSave.nvim"
 
   -- Git
   use { "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" } -- Magit for Nvim
