@@ -85,6 +85,7 @@ telescope.setup {
     },
     find_files = {
       theme = "ivy",
+      hidden = true
     },
     buffers = {
       theme = "ivy",
