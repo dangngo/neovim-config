@@ -108,6 +108,7 @@ return packer.startup(function(use)
   use "akinsho/bufferline.nvim" -- Tabline
   use "nvim-lualine/lualine.nvim" -- Statusline
   use "SmiteshP/nvim-gps" -- Show context in status line
+  use { 'stevearc/dressing.nvim' } -- Better vim.ui interfaces
 
   -- Misc
   use 'famiu/bufdelete.nvim' -- Buffer delete to go with bufferline
