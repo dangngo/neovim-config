@@ -87,11 +87,11 @@ return packer.startup(function(use)
     "folke/trouble.nvim", -- Show diagnostics
     cmd = "TroubleToggle",
   }
-  use {'kevinhwang91/nvim-bqf', ft = 'qf'}
+  use { 'kevinhwang91/nvim-bqf', ft = 'qf' }
   use {
     "ur4ltz/surround.nvim",
     config = function()
-      require"surround".setup {mappings_style = "surround"}
+      require "surround".setup { mappings_style = "surround" }
     end
   }
 
@@ -105,10 +105,15 @@ return packer.startup(function(use)
 
   -- UI
   use "kyazdani42/nvim-web-devicons" -- Icons
+  use { -- Scope buffers to tabs
+    "tiagovla/scope.nvim",
+    config = function() require("scope").setup() end,
+  }
   use "akinsho/bufferline.nvim" -- Tabline
   use "nvim-lualine/lualine.nvim" -- Statusline
   use "SmiteshP/nvim-gps" -- Show context in status line
-  use { 'stevearc/dressing.nvim' } -- Better vim.ui interfaces
+  use "stevearc/dressing.nvim" -- Better vim.ui interfaces
+  use "TC72/telescope-tele-tabby.nvim"
 
   -- Misc
   use 'famiu/bufdelete.nvim' -- Buffer delete to go with bufferline
