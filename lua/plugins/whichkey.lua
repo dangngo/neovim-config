@@ -5,7 +5,7 @@ end
 
 local setup = {
   plugins = {
-    marks = true, -- shows a list of your marks on ' and `
+    marks = false, -- shows a list of your marks on ' and `
     registers = true, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
     spelling = {
       enabled = true, -- enabling this will show WhichKey when pressing z= to select spelling suggestions
@@ -82,7 +82,10 @@ local mappings = {
     "<cmd>Telescope buffers<cr>",
     "Buffers",
   },
-  -- ["q"] = { "<cmd>lua require('utils').close_buffer()<cr>", "Close Buffer" },
+  ["`"] = {
+    "<cmd>Telescope tele_tabby list<cr>",
+    "Tabs",
+  },
   ["q"] = { "<cmd>Bdelete! %d<CR>", "Close Buffer" },
   ["w"] = { "<cmd>confirm qall<CR>", "Save & Quit" },
   ["<space>"] = {
@@ -99,7 +102,7 @@ local mappings = {
     r = { "<cmd>NvimTreeRefresh<cr>", "Refresh" },
     f = { "<cmd>NvimTreeFindFile<cr>", "Find File" },
   },
-  
+
   g = {
     name = "Git",
     g = { "<cmd>Neogit<cr>", "Neogit" },
@@ -172,7 +175,7 @@ local mappings = {
   },
 
   s = {
-    name = "Telescope Search",
+    name = "Search",
     r = { "<cmd>Telescope oldfiles<cr>", "Recent Files" },
     b = { "<cmd>Telescope git_branches theme=ivy<cr>", "Checkout branch" },
     c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
@@ -180,26 +183,26 @@ local mappings = {
     M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = { "<cmd>Telescope commands<cr>", "Commands" },
+    s = { "<cmd>lua require('spectre').open()<cr>", "Search & Replace" },
+    w = { "<cmd>lua require('spectre').open_visual({select_word=true})<CR>","Search current word" },
   },
 
   t = {
-    name = "Terminal",
+    name = "Tabs",
+    a = { "<cmd>tabnew<cr>", "New tab" },
+    c = { "<cmd>tabclose<cr>", "Close tab" },
+    n = { "<cmd>tabn<cr>", "Next tab" },
+    p = { "<cmd>tabp<cr>", "Previous tab" },
+  },
+
+  T = {
+    name = "Toggles",
     t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
     g = { "<cmd>lua _GITUI_TOGGLE()<cr>", "Gitui" },
     p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
     f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
-  },
-
-  S = {
-    name = "Search Spectre",
-    s = { "<cmd>lua require('spectre').open()<cr>", "Search & Replace" },
-    w = { "<cmd>lua require('spectre').open_visual({select_word=true})<CR>","Search current word" },
-  },
-
-  T = {
-    name = "Toggles",
     a = { "<cmd>ASToggle<cr>", "Toggle Autosave" },
   },
 }

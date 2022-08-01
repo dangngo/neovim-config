@@ -76,8 +76,8 @@ git clone https://github.com/dangngo/neovim-config.git ~/.config/nvim
 | Key Binding | Action                     |
 |-------------|----------------------------|
 | SPC \       | Toggle floating terminal   |
-| SPC t h     | Toggle horizontal terminal |
-| SPC t v     | Toggle vertical terminal   |
+| SPC T h     | Toggle horizontal terminal |
+| SPC T v     | Toggle vertical terminal   |
 
 ## References
 (Or where I stole some configs..)

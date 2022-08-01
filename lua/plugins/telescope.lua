@@ -9,6 +9,8 @@ end
 
 local actions = require "telescope.actions"
 
+telescope.load_extension("tele_tabby")
+
 telescope.setup {
   defaults = {
 
@@ -98,6 +100,9 @@ telescope.setup {
     },
   },
   extensions = {
+    tele_tabby = {
+      use_highlighter = true,
+    }
     -- Your extension configuration goes here:
     -- extension_name = {
     --   extension_config_key = value,
@@ -105,4 +110,3 @@ telescope.setup {
     -- please take a look at the readme of the extension you want to configure
   },
 }
-
