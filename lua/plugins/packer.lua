@@ -77,8 +77,8 @@ return packer.startup(function(use)
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
   -- Editor
-  use 'windwp/nvim-spectre' -- search & replace
-  use "Pocco81/AutoSave.nvim" -- autosave
+  use 'nvim-pack/nvim-spectre' -- search & replace
+  use "pocco81/auto-save.nvim" -- autosave
   use "windwp/nvim-autopairs" -- Autopairs
   use "abecodes/tabout.nvim" -- Tab out of stuffs
   use "numToStr/Comment.nvim" -- Easily comment stuff
