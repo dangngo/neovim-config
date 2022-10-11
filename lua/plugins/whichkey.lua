@@ -86,7 +86,7 @@ local mappings = {
     "<cmd>Telescope tele_tabby list<cr>",
     "Tabs",
   },
-  ["q"] = { "<cmd>Bdelete! %d<CR>", "Close Buffer" },
+  ["q"] = { "<cmd>BufDel<CR>", "Close Buffer" },
   ["w"] = { "<cmd>confirm qall<CR>", "Save & Quit" },
   ["<space>"] = {
     "<cmd>Telescope find_files<cr>",

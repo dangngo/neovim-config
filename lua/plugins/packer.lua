@@ -116,7 +116,11 @@ return packer.startup(function(use)
   use "TC72/telescope-tele-tabby.nvim"
 
   -- Misc
-  use 'famiu/bufdelete.nvim' -- Buffer delete to go with bufferline
+  --use 'famiu/bufdelete.nvim' -- Buffer delete to go with bufferline
+  use { -- Delete buffer keep window layout
+    'ojroques/nvim-bufdel',
+    config = function() require("bufdel").setup() end,
+  }
   use "lukas-reineke/indent-blankline.nvim" -- Show indents
   use "folke/which-key.nvim" -- Shortcut cheat sheet
   use 'lewis6991/impatient.nvim' -- Improve startup time
