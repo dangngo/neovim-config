@@ -119,7 +119,7 @@ return packer.startup(function(use)
   --use 'famiu/bufdelete.nvim' -- Buffer delete to go with bufferline
   use { -- Delete buffer keep window layout
     'ojroques/nvim-bufdel',
-    config = function() require("bufdel").setup() end,
+    config = function() require("bufdel").setup({ quit = false }) end,
   }
   use "lukas-reineke/indent-blankline.nvim" -- Show indents
   use "folke/which-key.nvim" -- Shortcut cheat sheet
