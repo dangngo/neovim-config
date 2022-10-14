@@ -89,7 +89,7 @@ local mappings = {
   ["q"] = { "<cmd>BufDel<CR>", "Close Buffer" },
   ["w"] = { "<cmd>confirm qall<CR>", "Save & Quit" },
   ["<space>"] = {
-    "<cmd>Telescope find_files<cr>",
+    "<cmd>lua require('utils').find_files({hidden=true})<cr>",
     "Find files",
   },
   ["f"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Find Text" },
