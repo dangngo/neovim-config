@@ -32,17 +32,17 @@ git clone https://github.com/dangngo/neovim-config.git ~/.config/nvim
 
 ### Basics
 
-| Key Binding | Action                          |
-| ----------- | ------------------------------- |
-| SPC SPC     | Find files in current directory |
-| SPC TAB     | List opened buffers             |
-| TAB         | Switch between opened buffers   |
-| SPC e t     | Open file explorer (nvim-tree)  |
-| SPC f       | Search text in current buffer   |
-| SPC /       | Search text in current project  |
-| SPC p       | List projects                   |
-| SPC q       | Close buffer                    |
-| SPC w       | Quit                            |
+| Key Binding | Action                              |
+| ----------- | -------------------------------     |
+| SPC SPC     | Find files in the current directory |
+| SPC TAB     | List opened buffers                 |
+| TAB         | Switch between opened buffers       |
+| SPC e t     | Open file explorer (nvim-tree)      |
+| SPC f       | Search text in current buffer       |
+| SPC /       | Search text in current project      |
+| SPC p       | List projects                       |
+| SPC q       | Close buffer                        |
+| SPC w       | Quit                                |
 
 ### Windows
 
