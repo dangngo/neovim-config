@@ -1,4 +1,5 @@
 return {
+  -- NORMAL MODE
   n = {
     -- CORE
     ["<leader>w"] = { "<cmd>confirm qall<cr>", desc = "Quit" },
@@ -22,17 +23,18 @@ return {
       function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
       desc = "Previous buffer",
     },
-
     -- FIND STUFF
-    ["<leader>ff"] = { "<cmd>Telescope current_buffer_fuzzy_find theme=ivy<cr>", desc = "Search Current Buffer" },
-    ["<leader>fr"] = { "<cmd>Telescope oldfiles theme=ivy<cr>", desc = "Recent Files" },
-    ["<leader>fy"] = { function() require("telescope.builtin").registers() end, desc = "Find registers" },
-    ["<leader>/"] = { "<cmd>Telescope live_grep theme=ivy<cr>", desc = "Find Text" },
+    ["<leader>ff"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Search Current Buffer" },
+    ["<leader>fr"] = { "<cmd>Telescope oldfiles<cr>", desc = "Recent Files" },
+    ["<leader>fy"] = { "<cmd>Telescope registers<cr>", desc = "Find registers" },
+    ["<leader>/"] = { "<cmd>Telescope live_grep<cr>", desc = "Find Text" },
     --------------------
     -- TERMINAL
     ["<C-\\>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggleterm" },
     --------------------
-    -- Some stuffs
+    -- BUFFERS
+    ["<leader>b"] = { name = "Buffers" },
+    ["<leader><tab>"] = { "<cmd>Telescope buffers<cr>", desc = "Buffers" },
     ["<leader>bD"] = {
       function()
         require("astronvim.utils.status").heirline.buffer_picker(
@@ -41,20 +43,17 @@ return {
       end,
       desc = "Pick to close",
     },
-    -- tables with the `name` key will be registered with which-key if it's installed
-    -- this is useful for naming menus
-    ["<leader>b"] = { name = "Buffers" },
-
     -- Disable idiot mappings
     ["|"] = false,
     ["\\"] = false,
+    ["s"] = false,
   },
+  -- INSERT MODE
   i = {
     ["fd"] = { "<ESC>" },
   },
+  -- TERMINAL NODE
   t = {
     ["<C-\\>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggleterm" },
-    -- setting a mapping to false will disable it
-    -- ["<esc>"] = false,
   },
 }
