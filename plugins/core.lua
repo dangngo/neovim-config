@@ -21,6 +21,14 @@ return {
     end,
   },
   {
+    "rcarriga/nvim-notify",
+    opts = {
+      render = "compact",
+      stages = "fade",
+      timeout = 500,
+    },
+  },
+  {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
       default_component_configs = {
@@ -38,6 +46,7 @@ return {
     opts = {
       defaults = {
         file_ignore_patterns = { ".git/", ".cache" },
+        path_display = { "smart" },
       },
       pickers = {
         colorscheme = {
@@ -66,7 +75,7 @@ return {
     },
   },
   {
-   "akinsho/toggleterm.nvim",
+    "akinsho/toggleterm.nvim",
     opts = {
       size = 10,
       shading_factor = 2,

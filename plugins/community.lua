@@ -4,11 +4,19 @@ return {
 
   -- language packs
   { import = "astrocommunity.pack.bash" },
-  { import = "astrocommunity.pack.markdown" },
-  { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.go" },
-  { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.json" },
+  { import = "astrocommunity.pack.markdown" },
+  { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.typescript" },
+
+  -- buffers & tabs
+  { import = "astrocommunity.bars-and-lines.scope-nvim" },
+
+  -- editor
+  { import = "astrocommunity.editing-support.nvim-ts-rainbow2" },
+
 
   -- motions
   { import = "astrocommunity.motion.mini-ai" },
@@ -16,7 +24,6 @@ return {
 
   -- projects
   { import = "astrocommunity.project.project-nvim" },
-  { import = "astrocommunity.project.nvim-spectre" },
 
   -- themes
   { import = "astrocommunity.colorscheme.catppuccin" },
