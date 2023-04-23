@@ -8,7 +8,7 @@ return {
         "lua_ls",
         "gopls",
         "pyright",
-        "terraform-ls",
+        "terraformls",
         "tsserver",
       },
     },
