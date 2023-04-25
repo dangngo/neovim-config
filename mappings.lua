@@ -78,5 +78,7 @@ return {
   -- TERMINAL NODE
   t = {
     ["<C-\\>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggleterm" },
+    ["<C-j>"] = false,
+    ["<C-k>"] = false,
   },
 }
