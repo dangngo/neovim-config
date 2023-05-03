@@ -52,6 +52,10 @@ return {
     ["<leader>s"] = sections.s,
     ["<leader>sp"] = { "<cmd>Telescope projects<cr>", desc = "Search Projects" },
     ["<leader>ss"] = { function() require("spectre").open() end, desc = "Search & Replace" },
+    -- GIT
+    ["<leader>g"] = sections.g,
+    ["<leader>gb"] = { "<cmd>:GitBlameToggle<cr>", desc = "Blame" },
+    ["<leader>gl"] = { "<cmd>Telescope git_bcommits theme=ivy<cr>", desc = "Current buffer revisions" },
     --------------------
     -- TERMINAL
     ["<C-\\>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggleterm" },
