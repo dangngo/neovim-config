@@ -8,8 +8,9 @@ local sections = {
   bs = { desc = "󰒺 Sort Buffers" },
   d = { desc = " Debugger" },
   g = { desc = " Git" },
-  S = { desc = "󱂬 Session" },
-  t = { desc = " Terminal" },
+  -- S = { desc = "󱂬 Session" },
+  t = { desc = "󱂬 Tabs" },
+  T = { desc = " Terminal" },
 }
 
 return {
@@ -38,6 +39,7 @@ return {
       function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
       desc = "Previous buffer",
     },
+
     -- FIND STUFF
     ["<leader>f"] = sections.f,
     ["<leader>ff"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Search Current Buffer" },
@@ -48,14 +50,28 @@ return {
       function() require("telescope").extensions.notify.notify(require("telescope.themes").get_dropdown({})) end,
       desc = "Find notifications",
     },
+
     -- SEARCH
     ["<leader>s"] = sections.s,
     ["<leader>sp"] = { "<cmd>Telescope projects<cr>", desc = "Search Projects" },
     ["<leader>ss"] = { function() require("spectre").open() end, desc = "Search & Replace" },
+
     -- GIT
     ["<leader>g"] = sections.g,
     ["<leader>gb"] = { "<cmd>:GitBlameToggle<cr>", desc = "Blame" },
     ["<leader>gl"] = { "<cmd>Telescope git_bcommits theme=ivy<cr>", desc = "Current buffer revisions" },
+
+    -- TABS
+    ["<leader>t"] = sections.t,
+    ["<leader>ta"] = { "<cmd>tabnew<cr>", desc = "New tab" },
+    ["<leader>tc"] = { "<cmd>tabclose<cr>", desc = "Close tab" },
+    ["<leader>tn"] = { "<cmd>tabn<cr>", desc = "Next tab" },
+    ["<leader>tp"] = { "<cmd>tabp<cr>", desc = "Previous tab" },
+    ["<leader>tf"] = false,
+    ["<leader>th"] = false,
+    ["<leader>tl"] = false,
+    ["<leader>tv"] = false,
+
     --------------------
     -- TERMINAL
     ["<C-\\>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggleterm" },
