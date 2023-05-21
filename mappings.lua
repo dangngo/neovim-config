@@ -100,5 +100,7 @@ return {
     ["<C-\\>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggleterm" },
     ["<C-j>"] = false,
     ["<C-k>"] = false,
+    ["<C-l>"] = false,
+    ["<C-h>"] = false,
   },
 }
