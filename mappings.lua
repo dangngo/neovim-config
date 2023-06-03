@@ -42,10 +42,18 @@ return {
 
     -- FIND STUFF
     ["<leader>f"] = sections.f,
-    ["<leader>ff"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Search Current Buffer" },
-    ["<leader>fr"] = { "<cmd>Telescope oldfiles<cr>", desc = "Recent Files" },
+    ["<leader>ff"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Search current buffer" },
+    ["<leader>fr"] = { "<cmd>Telescope oldfiles<cr>", desc = "Recent files" },
     ["<leader>fy"] = { "<cmd>Telescope registers<cr>", desc = "Find registers" },
-    ["<leader>/"] = { "<cmd>Telescope live_grep<cr>", desc = "Find Text" },
+    ["<leader>/"] = { "<cmd>Telescope live_grep<cr>", desc = "Find text" },
+    ["<leader>fa"] = {
+      function()
+        require("telescope.builtin").live_grep({
+          additional_args = function(args) return vim.list_extend(args, { "--hidden", "--no-ignore" }) end,
+        })
+      end,
+      desc = "Find in all files",
+    },
     ["<leader>fn"] = {
       function() require("telescope").extensions.notify.notify(require("telescope.themes").get_dropdown({})) end,
       desc = "Find notifications",
@@ -94,7 +102,7 @@ return {
   i = {
     ["fd"] = { "<ESC>" },
   },
-  -- TERMINAL NODE
+  -- TERMINAL MODE
   t = {
     ["<C-\\>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggleterm" },
     ["<C-j>"] = false,
