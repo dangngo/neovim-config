@@ -79,6 +79,9 @@ return {
     ["<leader>tl"] = false,
     ["<leader>tv"] = false,
 
+    -- LSP
+    ["<leader>lx"] = { "<cmd>TroubleToggle<cr>", desc = "Toggle Trouble" },
+
     --------------------
     -- TERMINAL
     ["<C-\\>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggleterm" },
