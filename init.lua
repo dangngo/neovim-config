@@ -11,8 +11,9 @@ return {
     show_changelog = true, -- show the changelog after performing an update
     auto_quit = false,     -- automatically quit the current session after a successful update
   },
-  colorscheme = "catppuccin",
+  -- colorscheme = "catppuccin",
   -- colorscheme = "nightfox",
+  colorscheme = "kanagawa",
   diagnostics = {
     virtual_text = true,
     underline = true,

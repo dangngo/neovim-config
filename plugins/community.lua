@@ -27,5 +27,6 @@ return {
 
   -- themes
   { import = "astrocommunity.colorscheme.catppuccin" },
-  { import = "astrocommunity.colorscheme.nightfox" },
+  { import = "astrocommunity.colorscheme.nightfox-nvim" },
+  { import = "astrocommunity.colorscheme.kanagawa-nvim" },
 }
