@@ -54,7 +54,6 @@ return {
     -- SEARCH
     ["<leader>s"] = sections.s,
     ["<leader>sp"] = { "<cmd>Telescope projects<cr>", desc = "Search Projects" },
-    ["<leader>ss"] = { function() require("spectre").open() end, desc = "Search & Replace" },
 
     -- GIT
     ["<leader>g"] = sections.g,

@@ -16,7 +16,7 @@ return {
 
   -- editor
   { import = "astrocommunity.editing-support.nvim-ts-rainbow2" },
-
+  { import = "astrocommunity.debugging.nvim-bqf" },
 
   -- motions
   { import = "astrocommunity.motion.mini-ai" },
