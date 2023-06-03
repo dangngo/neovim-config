@@ -66,6 +66,14 @@ return {
       defaults = {
         file_ignore_patterns = { ".git/", ".cache" },
         path_display = { "smart" },
+        mappings = {
+          n = {
+            ["<c-q>"] = function(bufnr)
+              require("telescope.actions").smart_send_to_qflist(bufnr)
+              require("telescope.actions").open_qflist(bufnr)
+            end,
+          },
+        },
       },
       pickers = {
         colorscheme = {
