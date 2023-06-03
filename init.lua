@@ -15,7 +15,8 @@ return {
   -- colorscheme = "nightfox",
   colorscheme = "kanagawa",
   diagnostics = {
-    virtual_text = true,
+    virtual_text = false,
+    virtual_lines = true,
     underline = true,
   },
   lsp = {
